@@ -4,6 +4,7 @@ Manage API authentication system
 """
 from flask import request
 from typing import List, TypeVar
+from os import getenv
 
 
 class Auth():
@@ -41,7 +42,7 @@ class Auth():
         """ Flask request object """
         return None
 
-     def session_cookie(self, request=None):
+    def session_cookie(self, request=None):
         """ Returns request cookie value """
         if request is None:
             return None
